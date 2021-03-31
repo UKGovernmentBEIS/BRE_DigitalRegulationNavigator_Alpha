@@ -1,0 +1,19 @@
+.form-wizard {
+    position: relative;
+    margin-top: govuk-spacing(9);
+
+    &__previous {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -(govuk-spacing(9));
+
+        button {
+            background-color: transparent;
+            border: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+            padding-top: 0;
+        }
+    }
+}

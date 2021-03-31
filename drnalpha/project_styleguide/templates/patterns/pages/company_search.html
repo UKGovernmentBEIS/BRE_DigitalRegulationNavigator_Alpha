@@ -1,0 +1,61 @@
+{% extends "patterns/base_page.html" %}
+
+{% block breadcrumbs %}
+    {% include "patterns/molecules/breadcrumbs/breadcrumbs.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="app__width-container">
+
+    {% if messages %}
+        <div class="messages">
+            <ul>
+                {% for message in messages %}
+                    <li class="{{ message.level_tag }}">{{ message|safe }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <main class="govuk-main-wrapper">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                {% include "patterns/molecules/page-heading/page-heading.html"  %}
+
+                <form enctype="multipart/form-data" method="POST" novalidate class="form" action="{% url "company:search" %}">
+                    {% csrf_token %}
+
+                    {% if form.errors %}
+                        <div class="form__errors">
+                            There were some errors with your form. Please amend the fields highlighted below.
+                        </div>
+                    {% endif %}
+
+                    {% for field in form.hidden_fields %}
+                        {{ field }}
+                    {% endfor %}
+
+                    {% for field in form.visible_fields %}
+                        {% if field.name == "company_name" %}
+                            {% include "patterns/molecules/companies-house/companies-house-search.html" with field=field %}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% include "patterns/atoms/button/button.html" with label="Search" %}
+                </form>
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <pre><code>{% if data %}{{ data|pprint }}{% endif %}</code></pre>
+            </div>
+        </div>
+
+    </main>
+</div>
+{% endblock %}

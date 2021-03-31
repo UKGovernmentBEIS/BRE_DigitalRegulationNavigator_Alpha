@@ -1,0 +1,90 @@
+html {
+    font-size: (map-get($small-font-sizes, xs) / 16px) * 100%;
+
+    @include media-query(medium) {
+        font-size: (map-get($medium-font-sizes, xs) / 16px) * 100%;
+    }
+
+    @include media-query(large) {
+        font-size: (map-get($large-font-sizes, xs) / 16px) * 100%;
+    }
+
+    line-height: 1.4;
+    color: $color--primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-text();
+    margin: 0;
+}
+
+blockquote {
+    font-family: $font--secondary;
+    font-style: italic;
+    font-weight: inherit;
+    text-transform: inherit;
+}
+
+small {
+    @include font-size(xs);
+}
+
+p {
+    margin: 0 0 $gutter;
+}
+
+.t-heading {
+    line-height: $line-height-large;
+    font-weight: $weight--normal;
+
+    &--display-one {
+        @include font-size(xxxxl);
+    }
+
+    &--display-two {
+        @include font-size(xxxl);
+    }
+
+    &--one {
+        @include font-size(xxl);
+    }
+
+    &--two {
+        @include font-size(xl);
+    }
+
+    &--three {
+        @include font-size(l);
+    }
+
+    &--four {
+        @include font-size(m);
+    }
+
+    &--five {
+        @include font-size(s);
+    }
+
+    &--link {
+        font-family: $font--secondary;
+    }
+}
+
+.t-body {
+    &--one {
+        @include font-size(xs);
+    }
+
+    &--two {
+        @include font-size(xxs);
+    }
+
+    &--support {
+        @include font-size(xxxs);
+    }
+}

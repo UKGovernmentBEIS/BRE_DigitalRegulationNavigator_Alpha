@@ -1,0 +1,10 @@
+<div class="govuk-form-group">
+  <label class="govuk-label" for="{{ field.id }}">
+    {{ field.label }}
+  </label>
+  <select class="govuk-select" id="sort" name="{{ field.id }}">
+    {% for option in field.options %}
+    <option value="{{ option.id }}">{{ option.label }}</option>
+    {% endfor %}
+  </select>
+</div>

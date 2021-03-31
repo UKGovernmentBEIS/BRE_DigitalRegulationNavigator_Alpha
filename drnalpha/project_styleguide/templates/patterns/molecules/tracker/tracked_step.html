@@ -1,0 +1,16 @@
+{% load wagtailcore_tags %}
+
+<div class="tracked-step">
+    <h4 class="govuk-heading-s">{{ step.name }}</h4>
+
+    <div class="govuk-body">
+        {{ step.description|richtext }}
+    </div>
+
+{#    <dl class="govuk-body tracked-step__info">#}
+{#        <dt>Status</dt>#}
+{#        <dd>{{ step.get_status_display }}</dd>#}
+{#        <dt>Due date</dt>#}
+{#        <dd>{{ step.due_date|default_if_none:"&ndash;" }}</dd>#}
+{#    </dl>#}
+</div>

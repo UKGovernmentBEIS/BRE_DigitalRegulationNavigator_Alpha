@@ -1,0 +1,9 @@
+<p>Welcome to the Regulation Navigator</p>
+
+<p>To view your Tracker, please visit the following link:</p>
+
+<p>
+    <a href="{{ request.scheme }}://{{ request.get_host }}{% url 'tracker:detail' %}">
+        View Tracker
+    </a>
+</p>

@@ -1,0 +1,32 @@
+context:
+  tracker:
+    pk: 1
+  category:
+    pk: 1
+    name: premises
+    slug: premises
+    verbose_name: my premises
+    regulations_count: 12
+    description: Intro text about this section
+  tasks:
+    - pk: 1
+      name: Alcohol License
+      regulation:
+        name: Licensing Act 2002, Section 4
+        get_importance_display: Mandatory
+      get_status_display: Overdue
+      is_overdue: true
+      is_complete: false
+      due_date: 2021-01-01
+      lead_time: '3 weeks'
+    - pk: 2
+      name: Hygiene Certificate
+      regulation:
+        name: Licensing Act 2002, Section 4
+        get_importance_display: Mandatory
+      get_status_display: Complete
+      is_complete: true
+      is_overdue: false
+      due_date: null
+      renewal_date: 2022-01-01
+      lead_time: '3 weeks'

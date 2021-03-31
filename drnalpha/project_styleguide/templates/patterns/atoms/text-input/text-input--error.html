@@ -1,0 +1,11 @@
+<div class="govuk-form-group govuk-form-group--error">
+  <label class="govuk-label" for="{{ field.id }}">
+    {{ field.label }}
+    {% if field.hint %}<span class="govuk-hint" id="{{ field.id }}-hint">{{ field.hint }}</span>{% endif %}
+  </label>
+  <span id="{{ field.id }}-error" class="govuk-error-message" style="max-width: 400px;">
+    <span class="govuk-visually-hidden">Error:</span> {{ field.errormessage }}
+  </span>
+  <input class="govuk-input govuk-input--error {% if field.modifier %}{{ field.modifier }}{% endif %}" id="{{ field.id }}"
+    name="{{ field.id }}" {% if field.value %}value="{{ field.value }}"{% endif %} type="{% if type == "password" %}password{% else %}text{% endif %}" {% if field.placeholder %}placeholder="{{ field.placeholder }}" {% endif %} aria-describedby="{{ field.id }}-hint event-name-error">
+</div>

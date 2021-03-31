@@ -1,0 +1,19 @@
+<dl class="govuk-summary-list {% if nomargin %}{% else %}govuk-!-margin-bottom-9{% endif %}">
+  {% for option in field.options %}
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      {{ option.label }}
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ option.details }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      {% if option.editable %}
+      <a class="govuk-link" href="{{ option.editHref|default:'#' }}">
+        {{ option.editLabel|default:'Change' }}<span class="govuk-visually-hidden"> {{ option.label }}</span>
+      </a>
+      {% endif %}
+    </dd>
+  </div>
+  {% endfor %}
+</dl>

@@ -1,0 +1,31 @@
+
+<section class="sidebar govuk-grid-column-one-third">
+    <div class="sidebar__inner">    
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-font-size-14">Your status</h2>
+
+        <p class="govuk-body govuk-!-margin-bottom-1">
+            {% if outstanding_tasks_count == 0 %}
+                <span class="sidebar__meta sidebar__meta--green">Compliant</span>
+            {% else %}
+                <span class="sidebar__meta sidebar__meta--red">Outstanding tasks</span>
+            {% endif %}
+        </p>
+
+        <h2 class="govuk-heading-s govuk-!-margin-bottom-1 govuk-!-font-size-14">Compliance progress</h2>
+
+        <p class="govuk-heading-xl govuk-!-margin-bottom-4">{{ completed_tasks_count }}/{{ tasks_count }}</p>
+
+        {% if outstanding_tasks_count == 0 %}
+            <p class="govuk-body">
+                All tasks are completed.
+            </p>
+        {% else %}
+            <p class="govuk-body">
+                You have <a href="#" class="govuk-link">{{ outstanding_tasks_count }} outstanding task{{ outstanding_tasks_count|pluralize }}</a> relating to this regulation.
+            </p>
+        {% endif %}
+    </div>
+</section>
+
+
+

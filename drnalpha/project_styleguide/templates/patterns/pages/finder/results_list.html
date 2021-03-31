@@ -1,0 +1,107 @@
+{% extends "patterns/base_page.html" %}
+{% load i18n %}
+
+{% block title %}Regulation finder{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="page-heading__heading govuk-heading-xl">
+                Business regulation assistance
+            </h1>
+
+            {% if regulations_count %}
+                <p class="govuk-body govuk-!-margin-bottom-6">
+                    We found <a href="{% url 'finder:regulation-index' %}" class="govuk-link">{{ regulations_count }} regulation{{ regulations_count|pluralize }}</a> in {{ categories|length }} categor{{ categories_count|pluralize:"y,ies" }} that apply to your business.
+                </p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            {% for category in categories %}
+                <div class="regulation-category">
+                    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+                        <a
+                            href="{% url 'finder:regulation-index' %}?category={{ category.slug }}"
+                            class="govuk-link no-text-decoration">
+                            {{ category.name|capfirst }} regulations
+                        </a>
+                    </h2>
+
+                    <span class="regulation-category__info govuk-caption-m govuk-!-margin-top-2">
+                        {{ category.regulations_count }}
+                        regulation{{ category.regulations_count|pluralize }} found,
+                        {{ category.regulations_count|pluralize:",including" }}
+                        {{ category.example_regulation_name }}
+                    </span>
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                </div>
+            {% empty %}
+                <p class="govuk-body">
+                    We did not find any regulations that apply to your business.
+                </p>
+            {% endfor %}
+
+        </div>
+        <div class="govuk-grid-column-one-third">
+
+            {% if regulations_count %}
+                <aside class="sidebar govuk-!-margin-bottom-5">
+                    <div class="sidebar__inner">
+                        <h2 class="govuk-heading-m">Track your compliance</h2>
+
+                        <p class="govuk-body">
+                            Sign in or register to see recommended tasks and track them over time.
+                        </p>
+
+                        <a href="{% url 'tracker:create' %}">
+                            <button class="govuk-button" data-module="govuk-button">
+                                Start tracking
+                            </button>
+                        </a>
+                    </div>
+                </aside>
+            {% endif %}
+
+            <aside class="sidebar govuk-!-margin-bottom-5">
+                <div class="sidebar__inner">
+                    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">
+                        Your business details
+                    </h2>
+
+                    <p class="govuk-body">
+                        <a href="{% url 'finder:step' 'company' %}" class="govuk-link">
+                            Change your details
+                        </a>
+                    </p>
+
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+                        Locations
+                    </h3>
+
+                    <ul class="govuk-list">
+                        {{ finder_data.jurisdictions|unordered_list }}
+                    </ul>
+
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+                        Number of employees
+                    </h3>
+
+                    {% include "patterns/molecules/finder/number-of-employees.html" %}
+
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+                        Activities
+                    </h3>
+
+                    {% include "patterns/molecules/finder/activities.html" %}
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+{% endblock content %}

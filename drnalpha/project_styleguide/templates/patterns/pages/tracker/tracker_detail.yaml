@@ -1,0 +1,24 @@
+context:
+  tracker:
+    pk: 1
+    get_categories_with_regulations_count:
+      - name: premises
+        slug: premises
+        verbose_name: my premises
+        regulations_count: 12
+        description: Intro text about this section
+      - name: product/services
+        slug: product-services
+        verbose_name: my product/services
+        regulations_count: 4
+        description: Intro text about this section
+      - name: people/staff
+        slug: people-staff
+        verbose_name: my people/staff
+        regulations_count: 8
+        description: Intro text about this section
+      - name: money
+        slug: money
+        verbose_name: my money
+        regulations_count: 9
+        description: Intro text about this section

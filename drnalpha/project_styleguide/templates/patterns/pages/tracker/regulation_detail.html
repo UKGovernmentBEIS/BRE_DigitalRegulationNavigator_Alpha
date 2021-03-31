@@ -1,0 +1,52 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block title %}{{ regulation.name }}{% endblock %}
+
+{% block breadcrumbs %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a
+                class="govuk-breadcrumbs__link"
+                href="{% url 'tracker:detail' %}">
+                Regulation tracker
+            </a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a
+                class="govuk-breadcrumbs__link"
+                href="{% url 'tracker:tracked-task-list' category.slug %}">
+                Regulations about {% firstof category.verbose_name category.name %}
+            </a>
+        </li>
+    </ol>
+</div>
+
+{% endblock breadcrumbs %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="page-heading__heading govuk-heading-xl">{{ regulation.name }}</h1>
+
+        <p class="govuk-body">
+            <strong class="govuk-tag">
+                {{ regulation.get_importance_display }}
+            </strong>
+        </p>
+
+        <div class="govuk-body">
+            {{ regulation.description|richtext }}
+        </div>
+    </div>
+
+    {% include "patterns/molecules/right-hand-sidebar/right-hand-sidebar--regulation.html" %}
+</div>
+
+{% endblock %}

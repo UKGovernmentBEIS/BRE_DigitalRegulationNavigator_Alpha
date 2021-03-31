@@ -1,0 +1,74 @@
+[
+  {
+    "model": "regulations.category",
+    "pk": 1,
+    "fields": {
+      "name": "Food",
+      "slug": "food",
+      "verbose_name": "",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.category",
+    "pk": 2,
+    "fields": {
+      "name": "Financial",
+      "slug": "financial",
+      "verbose_name": "my finances",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.category",
+    "pk": 3,
+    "fields": {
+      "name": "Premises",
+      "slug": "premises",
+      "verbose_name": "my premises",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.category",
+    "pk": 4,
+    "fields": {
+      "name": "Employment",
+      "slug": "employment",
+      "verbose_name": "my employees",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.category",
+    "pk": 5,
+    "fields": {
+      "name": "Corporate law",
+      "slug": "coporate-law",
+      "verbose_name": "",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.category",
+    "pk": 6,
+    "fields": {
+      "name": "Trading standards",
+      "slug": "trading-standards",
+      "verbose_name": "",
+      "description": "",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  }
+]

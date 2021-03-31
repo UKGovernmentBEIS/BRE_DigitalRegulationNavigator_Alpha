@@ -1,0 +1,9 @@
+context:
+  fieldOne:
+    label: 'Please state the total round trip distance'
+    id: distance
+  fieldTwo:
+    label: 'Distance units'
+    options:
+      - { label: 'Kilometers', id: km }
+      - { label: 'Miles', id: miles }

@@ -1,0 +1,75 @@
+{% load crispy_forms_field %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+    <div class="govuk-form-group
+        {% if field.errors %}govuk-form-group--error{% endif %}">
+
+        {% if not hide_label and field.label %}
+            {% if field|is_checkbox %}
+                <div class="govuk-checkboxes
+                    {% if checkboxes_small %}govuk-checkboxes--small{% endif %}">
+                    <div class="govuk-checkboxes__item">
+                        {% crispy_field field %}
+
+                        <label
+                            class="govuk-label govuk-checkboxes__label"
+                            for="{{ field.id_for_label }}">
+                            {{ field.label|safe }}
+                            {% if field.field.required %}
+                                <span class="asterisk">*</span>
+                            {% endif %}
+                        </label>
+                    </div>
+                </div>
+            {% else %}
+                <h1 class="govuk-label-wrapper">
+                    <label
+                        class="govuk-label{% if not labels_small %} govuk-label--l{% endif %}"
+                        for="{{ field.id_for_label }}">
+                        {{ field.label|safe }}
+                        {% if field.field.required %}
+                            <span class="asterisk">*</span>
+                        {% endif %}
+                    </label>
+                </h1>
+            {% endif %}
+        {% endif %}
+
+        {% if field.help_text %}
+            <div
+                id="hint_{{ field.auto_id }}"
+                class="govuk-hint">
+                {{ field.help_text|safe }}
+            </div>
+        {% endif %}
+
+        {% if form_show_errors and field.errors %}
+            <span id="{{ field.id_for_label }}-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">
+                    Error:
+                </span>
+                <ul class="govuk-list govuk-error-message">
+                    {% for error in field.errors %}
+                        <li>{{ error|escape }}</li>
+                    {% endfor %}
+                </ul>
+            </span>
+        {% endif %}
+
+        {% if field|is_checkboxselectmultiple %}
+            {% include "gds/layout/checkboxselectmultiple.html" %}
+        {% endif %}
+
+        {% if field|is_radioselect %}
+            {% include "gds/layout/radioselect.html" %}
+        {% endif %}
+
+        {% if not field|is_checkboxselectmultiple and not field|is_radioselect %}
+            {% if not field|is_checkbox %}
+                {% crispy_field field %}
+            {% endif %}
+        {% endif %}
+    </div>
+{% endif %}

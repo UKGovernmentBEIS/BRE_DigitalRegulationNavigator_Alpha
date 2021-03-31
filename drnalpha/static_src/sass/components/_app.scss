@@ -1,0 +1,8 @@
+.app {
+    $root: &;
+
+    &__width-container {
+        margin: 0 auto;
+        max-width: $site-width;
+    }
+}

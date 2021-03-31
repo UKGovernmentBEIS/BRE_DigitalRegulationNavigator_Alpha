@@ -1,0 +1,10 @@
+context:
+  company:
+    name: 'Pizza Planet'
+    get_sic_codes:
+      - pk: 500
+        code: 56101
+        title: Licensed restaurants
+    responsible_owner_name: Buzz Lightyear
+    number_of_employees: '2-10'
+    international_trading: 'Does not export'

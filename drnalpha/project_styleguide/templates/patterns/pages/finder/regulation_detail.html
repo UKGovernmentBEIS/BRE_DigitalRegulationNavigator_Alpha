@@ -1,0 +1,41 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block title %}Regulation tracker{% endblock %}
+
+{% block breadcrumbs %}
+
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+                <a
+                    class="govuk-breadcrumbs__link"
+                    href="{% url 'finder:results' %}">
+                    Regulation finder
+                </a>
+            </li>
+        </ol>
+    </div>
+
+{% endblock breadcrumbs %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="page-heading__heading govuk-heading-xl govuk-!-margin-bottom-4">
+                {{ regulation.name }}
+            </h1>
+
+            <p class="govuk-body regulation__importance">
+                <strong class="govuk-tag">
+                    {{ regulation.get_importance_display }}
+                </strong>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

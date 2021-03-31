@@ -1,0 +1,6 @@
+context:
+  finder_data:
+    full_time_permanent_employees: 40
+    full_time_contract_employees: 30
+    part_time_permanent_employees: 20
+    part_time_contract_employees: 10

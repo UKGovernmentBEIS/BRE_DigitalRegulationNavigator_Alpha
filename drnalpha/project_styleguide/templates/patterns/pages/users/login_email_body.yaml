@@ -1,0 +1,4 @@
+context:
+  user:
+    email: rita@example.com
+  login_url: https://localhost/tracker/?t=1234

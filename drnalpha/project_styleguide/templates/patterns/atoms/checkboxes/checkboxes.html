@@ -1,0 +1,19 @@
+<div class="govuk-form-group">
+  <h2 class="govuk-heading-m">{{ field.label }}</h2>
+  {% if field.hint %}
+  <span id="{{ id }}-hint" class="govuk-hint">
+    {{ field.hint }}
+  </span>
+  {% endif %}
+  <div class="govuk-checkboxes {% if field.modifier %}{{ field.modifier }}{% endif %}">
+    {% for option in field.options %}
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="{{ option.id }}" name="{{ field.id }}" type="checkbox"
+        value="{{ option.label }}" {% if option.checked %}checked{% endif %}>
+      <label class="govuk-label govuk-checkboxes__label" for="{{ option.id }}">
+        {{ option.label }}
+      </label>
+    </div>
+    {% endfor %}
+  </div>
+</div>

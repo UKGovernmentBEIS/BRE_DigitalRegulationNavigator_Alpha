@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "==19.10b0"
+flake8 = "*"
+
+[packages]
+"pdfminer.six" = "*"
+beautifulsoup4 = "*"
+nltk = "*"
+requests = "*"
+spacy = "*"
+spacy-lookups-data = "*"
+
+
+[requires]
+python_version = "3.8"

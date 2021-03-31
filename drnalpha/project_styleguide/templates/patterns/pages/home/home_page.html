@@ -1,0 +1,15 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+<div class="app__width-container">
+    <main class="govuk-main-wrapper">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                {% include "patterns/molecules/page-heading/page-heading.html"  %}
+            </div>
+        </div>
+    </main>
+</div>
+{% endblock %}

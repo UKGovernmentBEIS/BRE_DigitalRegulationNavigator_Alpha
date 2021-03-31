@@ -1,0 +1,41 @@
+<div class="regulation regulation--teaser">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+        <a
+            href="{{ regulation.url }}"
+            target="_blank"
+            class="govuk-link no-text-decoration regulation__link">
+            {{ regulation.name }}
+        </a>
+    </h2>
+
+    {% with regulators=regulation.get_regulators %}
+        {% if regulators %}
+            <h3 class="govuk-caption-m govuk-!-margin-top-0 govuk-!-margin-bottom-0 regulation__regulators">
+                {{ regulators|join:", " }}
+            </h3>
+        {% endif %}
+    {% endwith%}
+
+    <p class="govuk-body govuk-!-margin-top-2 regulation__importance ">
+        <strong class="govuk-tag">
+            {{ regulation.get_importance_display }}
+        </strong>
+    </p>
+
+    <dl class="govuk-body regulation__info">
+        <dt class="regulation__meta-label">Applies to:</dt>
+        <dd class="regulation__meta-description">
+            {{ regulation.get_jurisdictions|join:", " }}
+        </dd>
+    </dl>
+
+    {% if regulation.has_changed_recently %}
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                This regulation has changed recently.
+            </strong>
+        </div>
+    {% endif %}
+</div>

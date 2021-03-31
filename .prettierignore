@@ -1,0 +1,8 @@
+*.html
+coverage
+node_modules
+static_compiled
+venv
+.git
+media
+static

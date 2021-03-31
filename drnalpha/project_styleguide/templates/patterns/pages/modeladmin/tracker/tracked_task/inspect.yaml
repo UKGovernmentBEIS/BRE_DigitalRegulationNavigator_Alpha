@@ -1,0 +1,10 @@
+context:
+  instance:
+    company: Torchbox
+    regulation: The Food Safety Act 1990
+    get_status_display: In progress
+    description: 'A description...'
+    get_tracked_steps:
+      - name: Step 1
+        due_date: '1 Feb 2021'
+        get_status_display: In progress

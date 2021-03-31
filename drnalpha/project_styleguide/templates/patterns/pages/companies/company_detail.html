@@ -1,0 +1,112 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block title %}Your business details{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="page-heading__heading govuk-heading-xl">
+            Your business details
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds govuk-!-margin-top-4">
+        <h2 class="govuk-heading-m">General and contact details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Business name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ company.name }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> business name</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Activities
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    <ul class="govuk-list govuk-!-font-size-16">
+                        {% for code in company.get_sic_codes %}
+                            <li>{{ code.title }}</li>
+                        {% endfor %}
+                    </ul>
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> activities</span>
+                    </a>
+                </dd>
+            </div>
+            {% comment %} <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Responsible owner name
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ company.responsible_owner_name }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> owner's name</span>
+                    </a>
+                </dd>
+            </div> {% endcomment %}
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Email address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ request.user.email }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> email address</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+
+        <h2 class="govuk-heading-m">About your business</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    Number of employees
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ company.number_of_employees }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> number of employees</span>
+                    </a>
+                </dd>
+            </div>
+            {% comment %} <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                    International trading
+                </dt>
+                <dd class="govuk-summary-list__value">
+                    {{ company.international_trading }}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">
+                        Change<span class="govuk-visually-hidden"> international trading</span>
+                    </a>
+                </dd>
+            </div> {% endcomment %}
+        </dl>
+    </div>
+</div>
+
+{% endblock %}

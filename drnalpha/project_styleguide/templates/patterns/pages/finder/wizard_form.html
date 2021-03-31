@@ -1,0 +1,64 @@
+{% extends "patterns/base_page.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+    {{ wizard.form.media }}
+{% endblock %}
+
+{% block title %}Regulation finder{% endblock %}
+
+{% block content %}
+    {% block wizard_heading %}{% endblock %}
+
+    <form action="" method="post" novalidate class="form-wizard">
+        {{ wizard.management_form }}
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                {% block wizard_content %}{% endblock %}
+
+                {% block wizard_forms %}
+                    {% if wizard.form.forms %}
+                        {{ wizard.form.management_form }}
+                        {% for form in wizard.form.forms %}
+                            {% crispy form %}
+                        {% endfor %}
+                    {% elif wizard.form %}
+                        {% crispy wizard.form %}
+                    {% endif %}
+                {% endblock wizard_forms %}
+
+                {% block wizard_buttons %}
+                    <div class="form-wizard__buttons govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+                        {% block wizard_submit_button %}
+                            <span class="form-wizard__submit govuk-!-margin-right-2">
+                                <input
+                                    type="submit"
+                                    value="{% block wizard_submit_button_text %}{% trans "Continue" %}{% endblock %}"
+                                    class="govuk-button"
+                                    data-module="govuk-button" />
+                            </span>
+                        {% endblock wizard_submit_button %}
+
+                        {% if wizard.steps.prev %}
+                            <span class="form-wizard__previous govuk-!-margin-right-2">
+                                <button
+                                    name="wizard_goto_step"
+                                    type="submit"
+                                    value="{{ wizard.steps.prev }}"
+                                    class="govuk-back-link"
+                                    data-module="govuk-button">
+                                    {% trans "Back" %}
+                                </button>
+                            </span>
+                        {% endif %}
+                    </div>
+                {% endblock wizard_buttons %}
+            </div>
+            <div class="govuk-grid-column-one-third">
+                {% block wizard_sidebar %}{% endblock %}
+            </div>
+        </div>
+    </form>
+{% endblock content %}

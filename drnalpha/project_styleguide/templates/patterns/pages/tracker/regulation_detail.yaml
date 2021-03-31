@@ -1,0 +1,18 @@
+context:
+  tracker:
+    pk: 1
+  category:
+    pk: 1
+    name: premises
+    slug: premises
+    verbose_name: my premises
+    regulations_count: 12
+    description: Intro text about this section
+  regulation:
+    pk: 1
+    name: License Act 2002
+    description: A description...
+    get_importance_display: Mandatory
+  tasks_count: 10
+  completed_tasks_count: 6
+  outstanding_tasks_count: 4

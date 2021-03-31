@@ -1,0 +1,60 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block title %}Regulation tracker{% endblock %}
+
+{% block breadcrumbs %}
+
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a
+                class="govuk-breadcrumbs__link"
+                href="{% url 'tracker:detail' %}">
+                Regulation tracker
+            </a>
+        </li>
+    </ol>
+</div>
+
+{% endblock breadcrumbs %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="page-heading__heading govuk-heading-xl">
+            Regulations about {% firstof category.verbose_name category.name %}
+        </h1>
+
+        <div class="govuk-body">
+            {{ category.description|richtext }}
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-5">
+    <div class="govuk-grid-column-one-third">
+        {% include "patterns/molecules/filters/listing-filters.html" %}
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-body">
+            {{ tasks|length }} task{{ tasks|length|pluralize }}
+        </div>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        {% for task in tasks %}
+            {% include "patterns/molecules/tracker/tracked_task.html" %}
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

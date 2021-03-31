@@ -1,0 +1,24 @@
+/* stylelint-disable */
+input:not([type="submit"]).c-wagtailautocomplete__search {
+    padding-left: 44px;
+}
+
+.c-wagtailautocomplete__suggestions__item--active {
+    background-color: #00b0b1;
+    color: #fff;
+}
+
+.c-wagtailautocomplete__suggestions__item--active path {
+    fill: #fff;
+}
+
+.c-wagtailautocomplete__selection {
+    background-color: #007d7e;
+    color: #fff;
+}
+
+.c-wagtailautocomplete__selection__icon path {
+    fill: #fff;
+}
+
+/* stylelint-enable */

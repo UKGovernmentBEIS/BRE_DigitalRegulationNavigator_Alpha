@@ -1,0 +1,33 @@
+{% load crispy_forms_filters %}
+{% load l10n %}
+
+<div class="govuk-checkboxes{% if checkboxes_small %} govuk-checkboxes--small{% endif %}{% if checkboxes_columns %} form-checkboxes--columns{% endif %}">
+    {% for choice in field.field.choices %}
+        {% if checkboxes_columns %}<div class="form-checkboxes__wrapper">{% endif %}
+        <div class="govuk-checkboxes__item">
+            <input
+                type="checkbox"
+                name="{{ field.html_name }}"
+                class="govuk-checkboxes__input"
+                id="id_{{ field.html_name }}_{{ forloop.counter }}"
+                value="{{ choice.0|unlocalize }}"
+                {% if choice.0 in field.value or choice.0|stringformat:"s" in field.value or choice.0|stringformat:"s" == field.value|stringformat:"s" %}
+                checked="checked"
+                {% endif %}
+                {% if choice.hint %}
+                    aria-describedby="id_{{ field.html_name }}_{{ forloop.counter }}_hint"
+                {% endif %}
+            >
+
+            <label class="govuk-label govuk-checkboxes__label" for="id_{{ field.html_name }}_{{ forloop.counter }}">
+                {{ choice.1|unlocalize }}
+            </label>
+            {% if choice.hint %}
+                <span id="id_{{ field.html_name }}_{{ forloop.counter }}_hint" class="govuk-hint govuk-checkboxes__hint">
+                {{ choice.hint }}
+                </span>
+            {% endif %}
+        </div>
+        {% if checkboxes_columns %}</div>{% endif %}
+    {% endfor %}
+</div>

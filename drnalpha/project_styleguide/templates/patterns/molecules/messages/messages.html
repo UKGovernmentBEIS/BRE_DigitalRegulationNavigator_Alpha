@@ -1,0 +1,29 @@
+{% if messages %}
+    <div class="govuk-width-container govuk-!-margin-top-8">
+        {% for message in messages %}
+            <div
+                class="govuk-notification-banner
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                        govuk-notification-banner--success
+                    {% endif %}"
+                role="region"
+                aria-labelledby="govuk-notification-banner-title"
+                data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h2
+                        class="govuk-notification-banner__title"
+                        id="govuk-notification-banner-title">
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                            Success
+                        {% else %}
+                            Important
+                        {% endif %}
+                    </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    {{ message.message }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,5 @@
+context:
+  finder_data:
+    sic_codes:
+      - title: Licensed restaurants
+      - title: Licensed clubs

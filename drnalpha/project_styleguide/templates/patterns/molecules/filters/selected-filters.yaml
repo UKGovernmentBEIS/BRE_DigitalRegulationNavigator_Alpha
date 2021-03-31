@@ -1,0 +1,15 @@
+context:
+  form:
+    - field:
+        choices:
+          - [0, Mandatory]
+          - [1, Best practice]
+          - [2, Optional]
+      name: importance
+      value: 0
+    - field:
+        choices:
+          - [food, Food]
+          - [finance, Finance]
+      name: category
+      value: food

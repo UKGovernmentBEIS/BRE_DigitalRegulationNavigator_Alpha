@@ -1,0 +1,4 @@
+context:
+  regulation:
+    name: Food Safety Act 1990
+    get_importance_display: Mandatory

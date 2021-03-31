@@ -1,0 +1,6 @@
+<h3 class="govuk-heading-s">{{ field.title }}</h3>
+<ul class="govuk-list--bullet govuk-!-margin-bottom-8">
+    {% for option in field.options %}
+    <li class="govuk-body"><a class="govuk-link" href="{{ page.nextURL }}">{{ option.title }}</a></li>
+    {% endfor %}
+</ul>

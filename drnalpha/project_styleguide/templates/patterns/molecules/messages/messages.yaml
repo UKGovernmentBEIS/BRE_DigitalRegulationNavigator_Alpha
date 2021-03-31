@@ -1,0 +1,8 @@
+context:
+  messages:
+    - level: 20
+      tag: info
+      message: A message
+    - level: 25
+      tag: success
+      message: A success message

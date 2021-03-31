@@ -1,0 +1,10 @@
+context:
+  instance:
+    company: Torchbox
+    get_tracked_tasks:
+      - name: Task 1
+        regulation: The Food Safety Act 1990
+        get_status_display: In progress
+      - name: Task 2
+        regulation: Agriculture Act 1970
+        get_status_display: Complete

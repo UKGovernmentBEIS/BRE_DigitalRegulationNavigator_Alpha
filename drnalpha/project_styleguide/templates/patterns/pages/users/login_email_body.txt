@@ -1,0 +1,5 @@
+Here is your one-time sign in link:
+
+{{ login_url }}
+
+It is valid for 5 minutes.

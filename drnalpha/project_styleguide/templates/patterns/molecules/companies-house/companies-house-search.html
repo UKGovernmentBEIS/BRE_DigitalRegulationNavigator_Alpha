@@ -1,0 +1,16 @@
+{# Generic wrapper component for Companies House lookup #}
+<div data-companies-house-wrapper class="companies-house-wrapper">
+
+    <label class="govuk-label" for="{{ field.id_for_label }}">
+        {{ field.label }}
+        {% if field.help_text %}<span class="govuk-hint">{{ field.help_text }}</span>{% endif %}
+    </label>
+
+    <input data-companies-house-input autocomplete="off" class="govuk-input companies-house__search" type="text" name="{{ field.name }}" id="{{ field.id_for_label }}" {% if field.value %}value="{{ field.value }}"{% endif %}>
+
+    {# Results container #}
+    <div class="companies-house__results-wrapper">
+        <ul data-companies-house-results class="companies-house__results"></ul>
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+{% load wagtailcore_tags %}
+{% if page.get_ancestors|length > 2 %}
+<div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+    {% for ancestor_page in page.get_ancestors %}
+        {% if not ancestor_page.is_root %}
+        <li class="govuk-breadcrumbs__list-item">
+            {% if ancestor_page.depth > 2 %}
+                <a class="govuk-breadcrumbs__link" href="{% pageurl ancestor_page %}">{{ ancestor_page.title }}</a>
+            {% else %}
+                <a class="govuk-breadcrumbs__link" href="/">Home</a>
+            {% endif %}
+        </li>
+        {% endif %}
+    {% endfor %}
+      <li class="govuk-breadcrumbs__list-item" aria-current="page">{{ page.title }}</li>
+    </ol>
+</div>
+{% endif %}

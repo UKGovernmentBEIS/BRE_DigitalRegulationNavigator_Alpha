@@ -1,0 +1,36 @@
+.tracked-task {
+    &__link {
+        color: $color--dark-grey;
+
+        &:hover {
+            color: $govuk-focus-text-colour;
+        }
+    }
+
+    &__info {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 6px 10px;
+        grid-template-rows: max-content max-content;
+        grid-template-columns: 120px 120px 120px;
+        margin-bottom: govuk-spacing(5);
+    }
+
+    &__meta-label {
+        @include govuk-font($size: 14, $weight: bold);
+        color: $color--dark-grey;
+    }
+
+    &__meta-description {
+        @include govuk-font($size: 16);
+        margin: 0;
+
+        &--red {
+            color: $govuk-error-colour;
+        }
+
+        &--green {
+            color: $govuk-success-colour;
+        }
+    }
+}

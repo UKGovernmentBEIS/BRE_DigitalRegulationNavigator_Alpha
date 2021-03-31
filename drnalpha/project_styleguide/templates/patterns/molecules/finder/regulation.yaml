@@ -1,0 +1,14 @@
+context:
+  regulation:
+    pk: 1
+    name: Food Safety Act 1990
+    url: http://www.legislation.gov.uk/ukpga/1990/16/contents
+    get_regulators:
+      - Food Standards Agency
+    get_importance_display: Mandatory
+    get_jurisdictions:
+      - England
+      - Northern Ireland
+      - Scotland
+      - Wales
+    has_changed_recently: true

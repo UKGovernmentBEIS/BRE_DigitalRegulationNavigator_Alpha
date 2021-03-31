@@ -1,0 +1,7 @@
+context:
+  field:
+    title: 'Your recently added stops'
+    options:
+      - { title: 'Loughborough, Leicestershire' }
+      - { title: 'BS31 6SA' }
+      - { title: 'OX25 4SA' }

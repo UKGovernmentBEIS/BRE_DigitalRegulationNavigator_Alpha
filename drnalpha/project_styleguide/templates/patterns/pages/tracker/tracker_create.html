@@ -1,0 +1,40 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="page-heading__heading govuk-heading-xl">Create an account</h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body govuk-!-margin-bottom-7">
+            Sign in using your email address. Each time you want to sign in, we will email you a link that will allow you to view your regulations.
+        </p>
+
+        <div class="govuk-body">
+            <form
+                action="{% url 'tracker:create' %}"
+                method="post"
+                class="form"
+                novalidate>
+
+                {% if form %}
+                    {% crispy form %}
+                {% endif %}
+
+                <p>
+                    {% include "patterns/atoms/button/button.html" with label="Save and continue" %}
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

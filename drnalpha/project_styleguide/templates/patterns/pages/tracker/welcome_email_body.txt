@@ -1,0 +1,5 @@
+Welcome to the Regulation Navigator
+
+To view your Tracker, please visit the following link:
+
+{{ request.scheme }}://{{ request.get_host }}{% url 'tracker:detail' %}

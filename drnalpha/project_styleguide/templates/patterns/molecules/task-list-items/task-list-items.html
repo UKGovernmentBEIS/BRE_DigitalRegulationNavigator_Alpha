@@ -1,0 +1,15 @@
+<ul class="app-task-list__items">
+    {% for option in field.options %}
+    <li class="app-task-list__item">
+        <span class="app-task-list__task-name">
+            <a class="govuk-link" href="{{ option.href|default:'#' }}" aria-describedby="eligibility-completed">
+                {{ option.label }}
+            </a>
+        </span>
+        {% if option.status %}
+        <strong
+            class="govuk-tag {% if option.status == "completed" %}app-task-list__task-completed{% else %}app-task-list__task-incomplete{% endif %}">{{ option.status }}</strong>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

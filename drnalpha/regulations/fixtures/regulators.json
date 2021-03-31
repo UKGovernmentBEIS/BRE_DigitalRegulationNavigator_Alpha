@@ -1,0 +1,16 @@
+[
+  {
+    "model": "regulations.regulator",
+    "pk": 1,
+    "fields": {
+      "name": "FSA",
+      "verbose_name": "Food Standards Agency",
+      "slug": "fsa",
+      "url": "https://www.food.gov.uk",
+      "description": "",
+      "created_at": "2021-02-03T14:50:32.177Z",
+      "updated_at": "2021-02-03T14:50:32.177Z",
+      "sic_codes": [500, 501, 502, 503, 504, 505, 506]
+    }
+  }
+]

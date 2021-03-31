@@ -1,0 +1,7 @@
+context:
+  field:
+    label: 'Select label'
+    id: 'sort'
+    options:
+      - { label: 'Yes', id: sort }
+      - { label: 'No', id: sort-2 }

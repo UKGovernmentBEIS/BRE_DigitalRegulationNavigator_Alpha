@@ -1,0 +1,16 @@
+context:
+  form: nil
+  regulations_count: 1
+  regulations:
+    - name: Food Safety Act 1990
+      regulators:
+        all:
+          - Food Standards Agency
+      get_importance_display: Mandatory
+      jurisdictions:
+        all:
+          - England
+          - Northern Ireland
+          - Scotland
+          - Wales
+      has_changed_recently: true

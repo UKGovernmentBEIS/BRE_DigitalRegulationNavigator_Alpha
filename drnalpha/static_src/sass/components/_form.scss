@@ -1,0 +1,27 @@
+.form {
+    &__side-by-side {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+
+        .govuk-form-group {
+            margin-right: $gutter;
+        }
+    }
+}
+
+.form-checkboxes--columns {
+    @include govuk-media-query($from: desktop) {
+        column-count: 2;
+        column-gap: govuk-spacing(4);
+    }
+
+    .form-checkboxes__wrapper {
+        margin-bottom: govuk-spacing(1);
+        margin-left: -10px;
+        margin-top: govuk-spacing(1);
+        overflow: hidden;
+        padding-left: 10px;
+    }
+}

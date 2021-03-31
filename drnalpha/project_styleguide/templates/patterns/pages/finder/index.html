@@ -1,0 +1,68 @@
+{% extends "patterns/base_page.html" %}
+{% load i18n %}
+
+{% block title %}Regulation finder{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="page-heading__heading govuk-heading-xl">
+                Business regulation checker
+            </h1>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <p class="govuk-body">
+                Check the regulations that apply to your business all in one place. You can see:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>new and updated regulations</li>
+                <li>regulations for all activities your business is involved in</li>
+                <li>your regulations by region</li>
+                <li>signposting to further help and guidance</li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Before you start</h2>
+
+            <p class="govuk-body">
+                All you need to do is supply some basic information about your business. You’ll need to know:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>where your business operates</li>
+                <li>how many employees you have</li>
+                <li>what basis you employ people on, e.g. full-time or part-time</li>
+                <li>the activities your business carries out.</li>
+            </ul>
+
+            <h2 class="govuk-heading-l">Business Regulation tracker</h2>
+
+            <p class="govuk-body">
+                You can also track your compliance by signing into our Regulation tracker tool using your Government Gateway log in details.
+            </p>
+
+            <p class="govuk-inset-text">
+                This information won’t be used to monitor your compliance with any laws or codes of practice.
+            </p>
+
+            <p>
+                <a href="{% url 'finder:step' 'company' %}"
+                    <button
+                        draggable="false"
+                        class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8 govuk-button--start"
+                        data-module="govuk-button">
+                        Start now
+                        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                        </svg>
+                    </button>
+                </a>
+            </p>
+
+        </div>
+    </div>
+{% endblock content %}

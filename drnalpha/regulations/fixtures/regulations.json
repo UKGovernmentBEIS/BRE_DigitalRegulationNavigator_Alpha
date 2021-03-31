@@ -1,0 +1,178 @@
+[
+  {
+    "model": "regulations.regulation",
+    "pk": 1,
+    "fields": {
+      "name": "Agriculture Act 1970",
+      "url": "http://www.legislation.gov.uk/ukpga/1970/40/contents",
+      "description": "Provides the framework for domestic agriculture legislation and provides powers to make secondary legislation to implement EU feed Laws",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 2,
+    "fields": {
+      "name": "The Food Environment and Protection Act 1985",
+      "url": "http://www.legislation.gov.uk/ukpga/1985/48/contents",
+      "description": "Provides the framework for making emergency orders specifying activities which are to be prohibited as a precaution against the consumption of food rendered unsuitable for human consumption in consequence of an escape of substances.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 3,
+    "fields": {
+      "name": "The Food Safety Act 1990",
+      "url": "http://www.legislation.gov.uk/ukpga/1990/16/contents",
+      "description": "Provides the framework for all domestic food legislation and provides powers to make secondary legislation to implement EU food Laws",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 4,
+    "fields": {
+      "name": "The Food Standards Act 1999",
+      "url": "http://www.legislation.gov.uk/ukpga/1999/28/contents",
+      "description": "Establishing the Food Standards Agency",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 5,
+    "fields": {
+      "name": "The European Union (Withdrawal Agreement) Act 2020",
+      "url": "http://www.legislation.gov.uk/ukpga/2020/1/contents",
+      "description": "Implements the Withdrawal Agreement, as agreed between the United Kingdom and the European Union (EU).",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 6,
+    "fields": {
+      "name": "The Animal Feed (Basic Safety Standards) (England) Regulation 2019",
+      "url": "http://www.legislation.gov.uk/uksi/2019/683/contents/made",
+      "description": "I ( (These Regulations provide for the transposition in England of the requirements of Council Directive 2013/59/Euratom of 5th December 2013 laying down basic safety standards for protection against the dangers arising from exposure to ionising radiation, and repealing Directives 89/618/Euratom, 90/641/Euratom, 96/29/Euratom, 97/43/Euratom and 2003/122/Euratom (OJ L 13, 17.1.2014, p. 1). n particular, these regulations provide that a person commits an offence if they \u2013 a) intentionally add any radioactive substance to animal feed during production of the feed. b) import to, or export from, the United Kingdom and animal feed to which, during production, a radioactive substance has been intentionally added.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 7,
+    "fields": {
+      "name": "The Animal Feed (Composition, Marketing and Use) (England) Regulations 2015",
+      "url": "http://www.legislation.gov.uk/uksi/2015/255/contents/made",
+      "description": "These Regulations provide for the enforcement or implementation of EU Regulations and Directives on feed safety, genetically modified feed, feed additives, the marketing and use of feed, undesirable substances (contaminants) in feed and feed for particular nutritional purposes.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 8,
+    "fields": {
+      "name": "The Animal Feed (Hygiene, Sampling etc and Enforcement) (England) Regulations 2015",
+      "url": "http://www.legislation.gov.uk/uksi/2015/454/contents/made",
+      "description": "These Regulations, provide for the continuing execution and enforcement of Regulation (EC) No 183/2005 laying down requirements for feed hygiene, (\u201cRegulation 183/2005\u201d) and Commission Regulation (EC) No. 152/2009 laying down the methods of sampling and analysis for the official control of feed, (\u201cRegulation 152/2009\u201d), and also make provision as to administration generally in relation to feed law, in particular so as to give effect to Regulation (EC) No 2017/625 on official controls and other official activities performed to ensure the application of food and feed law, rules on animal health and welfare, plant health",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 9,
+    "fields": {
+      "name": "The Feed (Sampling and Analysis and Specified Undesirable Substances (England) Regulations 2010",
+      "url": "http://www.legislation.gov.uk/uksi/2010/2280/contents/made",
+      "description": "PThese Regulations provide for the execution in England of Commission Regulation (EC) No. 152/2009 laying down the methods of sampling and analysis for the official control of feed. The Commission Regulation repeals and re-enacts with certain amendments a large number of European directives concerning methods of sampling and analysis of feeding stuffs. The Regulations revoke (in relation to England) the Feeding Stuffs (Sampling and Analysis) Regulations 1999 as amended, which implemented those directives and re-enact those administrative provisions of the 1999 Regulations which need to be kept in force. The Regulation also amends the Feeding Stuffs (England) Regulations 2005. lease note that Regulations 4, 5, 6, 7, 21, 22, 23 and Schedule 1 of 2010 No. 2280 were revoked by The Animal Feed (Hygiene, Sampling etc. and Enforcement) (England) Regulations 2015.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 10,
+    "fields": {
+      "name": "The Animal Feed (England) Regulations 2010",
+      "url": "http://www.legislation.gov.uk/uksi/2010/2503/contents",
+      "description": "[These regulations revoke the Feeding Stuffs (England) Regulations 2005 as amended and re-enact certain of their provisions. They also provide for the execution and enforcement of Regulation 767/2009 on the marketing and use of feed and for the enforcement of the EU Regulation 1831/2003 on feed additives. Additionally, it maintains the implementation of EU Directives 2008/38 & 2002/32 concerning dietetic feeds and contaminants in feed and makes amendments and modifications to Part IV of the Agriculture Act 1970 as well as amending certain other Regulations. It should be noted that only regulations 1, 2 and 14.of these England Regulations remain in force following the revocation of the other regulations by The Animal Feed (Composition, Marketing and Use) (England) Regulations 2015]",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 11,
+    "fields": {
+      "name": "The Food Additives, Flavourings, Enzymes and Extraction Solvents (England) Regulations 2013",
+      "url": "http://www.legislation.gov.uk/uksi/2013/2210/contents/made",
+      "description": "Provides for the execution and enforcement of EU Regulations on food additives, flavourings (including smoke flavourings) and enzymes. Partially transposes the extraction solvent requirements (Directive 2009/32/EC). The 2013 Regulations revoked various earlier sectorial legislation and consolidated the requirements into one measure.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 12,
+    "fields": {
+      "name": "The Contaminants in Food (England) Regulations 2013",
+      "url": "http://www.legislation.gov.uk/uksi/2013/2196/made",
+      "description": "Provides for the execution and enforcement of Regulation (EC) No.1881/2006 as amended .",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 13,
+    "fields": {
+      "name": "The Materials and Articles in Contact with Food (England) Regulations 2012",
+      "url": "http://www.legislation.gov.uk/uksi/2012/2619/contents/made",
+      "description": "AProvides for the execution and enforcement in England of the provisions of several Regulations and Directives that are responsible for ensuring the safety of consumers in relation to specific materials and articles intended to come into contact with food. The full list can be found under the next headers. lso revokes and re- enacts all existing national measures, with the exception of the Plastic Kitchenware (Conditions on Import from China) (England) Regulations 2011.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 14,
+    "fields": {
+      "name": "The Plastic Kitchenware (Conditions on Imports from China) (England) Regulations 2011",
+      "url": "http://www.legislation.gov.uk/uksi/2011/1517/contents/made",
+      "description": "Provides for the execution and enforcement in relation to England of Regulation (EU) No. 284/2011, which lays down specific conditions and detailed procedures for the import of polyamide and melamine plastic kitchenware originating in or consigned from China and Hong Kong",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 15,
+    "fields": {
+      "name": "Specified Products from China (Restriction on First Placing on the Market) (England) Regulations 2008",
+      "url": "http://www.opsi.gov.uk/si/si2008/uksi_20081079_en_1",
+      "description": "Provides for the execution and enforcement of Commission Implementing Decision 2011/884/EU on the emergency measures regarding unauthorised genetically modified rice in rice products originating from China.",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.regulation",
+    "pk": 16,
+    "fields": {
+      "name": "The Food Irradiation (England) Regulations 2009",
+      "url": "http://www.opsi.gov.uk/si/si2009/uksi_20091584_en_1",
+      "description": "CImplements Directive 1999/2/EC concerning foods and food ingredients treated with ionising radiation, Directive 1999/3/EC listing foods and food ingredients that may be treated with ionising radiation, Commission Decision 2002/840/EC adopting the list of approved facilities in third countries for the Irradiation of foods, Commission List of approved facilities for the treatment of foods and food ingredients with ionising radiation in the Member States ommission Decision 2004/691/EC amending Decision 2002/840/EC adopting the list of approved facilities in third countries for the irradiation of food and Commission Decision 2007/802/EC amending Decision 2002/840/EC as regards the list of approved facilities in third countries for the irradiation of foods [Note: The Food Information Regulations 2014 contain mandatory labelling requirements on irradiated food sold to the consumer and to catering establishments.]",
+      "created_at": "2021-02-08T10:58:01.481391+00:00",
+      "updated_at": "2021-02-08T10:58:01.481391+00:00"
+    }
+  }
+]

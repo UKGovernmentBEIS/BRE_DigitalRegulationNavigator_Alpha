@@ -1,0 +1,21 @@
+{% extends "patterns/pages/finder/wizard_form.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form action="" method="post" novalidate class="form-wizard">
+        {{ wizard.management_form }}
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                {% block wizard_forms %}
+                    {{ block.super }}
+                {% endblock wizard_forms %}
+
+                {% block wizard_buttons %}
+                    {{ block.super }}
+                {% endblock wizard_buttons %}
+            </div>
+        </div>
+    </form>
+{% endblock content %}

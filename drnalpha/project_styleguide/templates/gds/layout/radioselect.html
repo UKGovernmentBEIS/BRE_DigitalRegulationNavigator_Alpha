@@ -1,0 +1,23 @@
+{% load crispy_forms_filters %}
+{% load l10n %}
+
+<div class="govuk-radios{% if radios_inline %} govuk-radios--inline{% endif %}{% if radios_small %} govuk-radios--small{% endif %}">
+    {% for choice in field.field.choices %}
+        <div class="govuk-radios__item">
+            <input
+                type="radio"
+                name="{{ field.html_name }}"
+                value="{{ choice.0|unlocalize }}"
+                {% if choice.0|stringformat:"s" == field.value|default_if_none:""|stringformat:"s" %} checked="checked"{% endif %}
+                {% if field.field.disabled %}disabled="true"{% endif %}
+                id="id_{{ field.html_name }}_{{ forloop.counter }}"
+                class="govuk-radios__input"
+                {{ field.field.widget.attrs|flatatt }} />
+            <label
+                class="govuk-label govuk-radios__label"
+                for="id_{{ field.html_name }}_{{ forloop.counter }}">
+                {{ choice.1|unlocalize }}
+            </label>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+{% load l10n finder_tags %}
+
+<div class="selected-filters">
+    <div class="selected-filters__label">
+        Relating to
+    </div>
+    <div>
+        <ul class="selected-filters__list">
+            {% for field in form %}
+                {% for choice in field.field.choices %}
+                    {% if choice.0 in field.value or choice.0|stringformat:"s" in field.value or choice.0|stringformat:"s" == field.value|stringformat:"s" %}
+                        <li class="selected-filters__item">
+                            <a
+                                href="?{% remove_filter field.name choice.0 %}"
+                                class="selected-filters__link"
+                                title="Remove filter">
+                                <span class="selected-filters__link-icon">&times;</span>
+                                <span class="selected-filters__link-label">
+                                    {{ choice.1|unlocalize }}
+                                </span>
+                            </a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

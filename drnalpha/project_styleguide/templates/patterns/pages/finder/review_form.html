@@ -1,0 +1,96 @@
+{% extends "patterns/pages/finder/wizard_form.html" %}
+{% load i18n %}
+
+{% block wizard_heading %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="page-heading__heading govuk-heading-xl">
+                Check your answers
+            </h1>
+        </div>
+    </div>
+{% endblock wizard_heading %}
+
+{% block wizard_content %}
+    <dl class="govuk-summary-list">
+        {% comment %} <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Company name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {{ finder_data.name }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <button
+                    name="wizard_goto_step"
+                    type="submit"
+                    value="info"
+                    class="app-link-button"
+                    data-module="govuk-button">
+                    Change <span class="govuk-visually-hidden"> info</span>
+                </button>
+            </dd>
+        </div> {% endcomment %}
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Locations
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {% for jurisdiction in finder_data.jurisdictions %}{% if forloop.counter > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}{{ jurisdiction }}{% endfor %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <button
+                    name="wizard_goto_step"
+                    type="submit"
+                    value="locations"
+                    class="app-link-button"
+                    data-module="govuk-button">
+                    Change
+                    <span class="govuk-visually-hidden"> areas</span>
+                </button>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Number of employees
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {% include "patterns/molecules/finder/number-of-employees.html" %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <button
+                    name="wizard_goto_step"
+                    type="submit"
+                    value="employees"
+                    class="app-link-button"
+                    data-module="govuk-button">
+                    Change
+                    <span class="govuk-visually-hidden"> number of employees</span>
+                </button>
+            </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                Activities
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {% include "patterns/molecules/finder/activities.html" %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+                <button
+                    name="wizard_goto_step"
+                    type="submit"
+                    value="activities"
+                    class="app-link-button"
+                    data-module="govuk-button">
+                    Change
+                    <span class="govuk-visually-hidden"> activities</span>
+                </button>
+            </dd>
+        </div>
+    </dl>
+
+    <div class="govuk-inset-text">
+        Any data you provide while using this service will not be viewed by the government or used as an official record of your compliance.
+    </div>
+{% endblock wizard_content %}

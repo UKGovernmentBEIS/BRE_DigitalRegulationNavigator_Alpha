@@ -1,0 +1,4 @@
+context:
+  tasks_count: 10
+  completed_tasks_count: 6
+  outstanding_tasks_count: 4

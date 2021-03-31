@@ -1,0 +1,24 @@
+.app-header {
+    border-bottom: 0; // only needed whilst phase banner is there
+
+    &__logo {
+        width: auto;
+        float: none;
+    }
+
+    &__logo-logout {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logout {
+        margin-bottom: 10px;
+    }
+
+    &__logout-link {
+        display: block;
+        color: $color--white;
+    }
+}

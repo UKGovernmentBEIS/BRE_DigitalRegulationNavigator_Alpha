@@ -1,0 +1,39 @@
+<div class="tracked-task">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
+        <a
+            href="{% url 'tracker:tracked-task-detail' category.slug task.pk %}"
+            class="tracked-task__link govuk-link no-text-decoration">
+            {{ task.name }}
+        </a>
+    </h2>
+
+    <h3 class="govuk-caption-m govuk-!-margin-top-0 govuk-!-margin-bottom-2">
+        <a
+            href="{% url 'tracker:regulation-detail' category.slug task.pk %}"
+            class="tracked-task__link no-text-decoration">
+            {{ task.regulation.name }}
+        </a>
+    </h3>
+
+    <p class="govuk-body">
+        <strong class="govuk-tag">
+            {{ task.regulation.get_importance_display }}
+        </strong>
+    </p>
+
+    <dl class="tracked-task__info govuk-body">
+        <dt class="tracked-task__meta-label">Your status</dt>
+        <dd class="tracked-task__meta-description
+            {% if task.is_overdue %}
+                tracked-task__meta-description--red
+            {% elif task.is_complete %}
+                tracked-task__meta-description--green
+            {% endif %}">
+            {{ task.get_status_display }}
+        </dd>
+{#        <dt class="tracked-task__meta-label">Due date</dt>#}
+{#        <dd class="tracked-task__meta-description">{{ task.due_date|default_if_none:"&ndash;" }}</dd>#}
+{#        <dt class="tracked-task__meta-label">Lead time</dt>#}
+{#        <dd class="tracked-task__meta-description">{{ task.lead_time }}</dd>#}
+    </dl>
+</div>

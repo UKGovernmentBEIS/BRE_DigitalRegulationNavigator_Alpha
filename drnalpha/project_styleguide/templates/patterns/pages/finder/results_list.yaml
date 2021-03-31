@@ -1,0 +1,12 @@
+context:
+  regulations_count: 3
+  categories_count: 2
+  categories:
+    - pk: 1
+      name: food
+      regulations_count: 2
+      example_regulation_name: Food Standards Act 1999
+    - pk: 2
+      name: financial
+      regulations_count: 1
+      example_regulation_name: Corporation Tax Act 2010

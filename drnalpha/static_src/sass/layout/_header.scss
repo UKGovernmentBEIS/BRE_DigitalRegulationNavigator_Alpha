@@ -1,0 +1,14 @@
+.header {
+    $root: &;
+
+    &__container {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding-top: ($gutter * 1.5);
+        padding-bottom: ($gutter);
+
+        @include media-query(medium) {
+            padding-top: ($gutter * 2);
+        }
+    }
+}

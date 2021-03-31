@@ -1,0 +1,11 @@
+.regulation {
+    &__meta-label {
+        @include govuk-font($size: 14, $weight: bold);
+        color: $color--dark-grey;
+    }
+
+    &__meta-description {
+        @include govuk-font($size: 16);
+        margin: 0;
+    }
+}

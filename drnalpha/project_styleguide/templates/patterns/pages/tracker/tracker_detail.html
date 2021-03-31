@@ -1,0 +1,24 @@
+{% extends "patterns/base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block title %}Regulation tracker{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="page-heading__heading govuk-heading-xl govuk-!-margin-bottom-4">Regulation tracker</h1>
+
+        <p class="govuk-body govuk-!-margin-bottom-8">
+            Introductory text about the Regulation tracker.
+        </p>
+    </div>
+</div>
+
+<div class="card-container">
+    {% for category in tracker.get_categories_with_regulations_count %}
+        {% include "patterns/molecules/tracker/tracker.html" %}
+    {% endfor %}
+</div>
+
+{% endblock %}

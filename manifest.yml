@@ -1,0 +1,11 @@
+---
+# note: this for sandbox only
+applications:
+  - name: beis-bre-drn-alpha
+    memory: 256M
+    buildpacks:
+      - python_buildpack
+    services:
+      - beis-bre-drn-alpha-postgres
+    env:
+      DJANGO_SETTINGS_MODULE: drnalpha.settings.production

@@ -1,0 +1,46 @@
+{% load wagtailcore_tags %}
+{% load crispy_forms_tags %}
+
+{% if form %}
+    <section class="govuk-body">
+        <h2 class="u-sr-only">Filter by:</h2>
+
+        <form method="GET">
+            {% for field in form %}
+                <div data-accordion class="accordion govuk-form-group {% if field.value %}is-open{% endif %}">
+                    <fieldset class="govuk-fieldset">
+                        <legend
+                            class="listing-filters__legend"
+                            data-accordion-question
+                            role="tab"
+                            aria-controls="answer-{{ forloop.counter }}"
+                            aria-expanded="false"
+                            aria-selected="false"
+                            id="question-{{ forloop.counter }}"
+                        >
+                            {% include "patterns/atoms/icons/icon.html" with name="chevron" classname="accordion__icon" %}
+                            <span class="listing-filters__legend-label">
+                                {{ field.label }}
+                            </span>
+                        </legend>
+                        <div
+                            data-accordion-answer
+                            class="accordion__content govuk-checkboxes govuk-checkboxes--small"
+                            aria-live="polite"
+                            id="answer-{{ forloop.counter }}"
+                            role="tabpanel"
+                            aria-labelledby="question-{{ forloop.counter }}"
+                            aria-hidden="false"
+                        >
+                            {{ field|as_crispy_field }}
+                        </div>
+                    </fieldset>
+                </div>
+            {% endfor %}
+
+            <p>
+                {% include "patterns/atoms/button/button.html" with label="Filter" %}
+            </p>
+        </form>
+    </section>
+{% endif %}

@@ -1,0 +1,26 @@
+{% load wagtailcore_tags %}
+
+<div class="card">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+        <a
+            href="{% url 'tracker:tracked-task-list' category.slug %}"
+            class="govuk-link no-text-decoration">
+            Regulations about {% firstof category.verbose_name category.name %}
+        </a>
+    </h2>
+
+    <p class="govuk-body">
+        <a
+            href="{% url 'tracker:tracked-task-list' category.slug %}"
+            class="govuk-link no-text-decoration">
+            <strong class="govuk-caption-m govuk-!-font-weight-bold">
+                {{ category.regulations_count }}
+                regulation{{ category.regulations_count|pluralize }}
+            </strong>
+        </a>
+    </p>
+
+    <div class="govuk-body">
+        {{ category.description|richtext }}
+    </div>
+</div>

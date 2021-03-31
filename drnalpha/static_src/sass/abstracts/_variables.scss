@@ -1,0 +1,60 @@
+// // --------------------------------- Colors -------------------------------------
+
+$color--black: #000;
+$color--white: #fff;
+$color--blue: #1d70b8;
+
+$color--border: #fefefe;
+$color--light-grey: govuk-colour('light-grey');
+$color--dark-grey: #6f777b;
+// $color--orange: #ff5d1c;
+// $color--dark-grey: #676767;
+
+// $color--white-12: rgba($color--white, 0.12);
+// $color--white-24: rgba($color--white, 0.24);
+// $color--black-12: rgba($color--black, 0.12);
+// $color--black-24: rgba($color--black, 0.24);
+// $color--black-65: rgba($color--black, 0.65);
+// $color--black-80: rgba($color--black, 0.8);
+
+// $color--primary: $color--black;
+// $color--secondary: $color--white;
+// $color--tertiary: $color--orange;
+
+// // --------------------------------- Breakpoints --------------------------------------
+// $breakpoints: ('medium' '(min-width: 599px)', 'large' '(min-width: 1023px)');
+
+// // --------------------------------- Z-indices --------------------------------------
+
+// $z-index: (
+//     under: -10,
+//     base: 10,
+//     overlap: 20,
+//     free30: 30,
+//     headerLogo: 40,
+//     under-gridlines: 45,
+//     gridlines: 50,
+//     above-gridlines: 60,
+//     header: 70,
+//     nav-overlay: 75,
+//     nav: 80,
+//     header-gridlines: 90,
+//     cookie-message: 100,
+//     modal: 110,
+//     modal-controls: 120,
+// );
+
+// // --------------------------------- Grid Dimensions --------------------------------------
+
+$grid: 20px;
+$gutter: $grid;
+
+// Wrappers
+$site-width: 1100px;
+
+// --------------------------------- Borders --------------------------------------
+$card-border: 1px solid $color--dark-grey;
+
+// --------------------------------- Transitions --------------------------------------
+
+// $transition: 250ms cubic-bezier(0.24, 0.26, 0.2, 1);

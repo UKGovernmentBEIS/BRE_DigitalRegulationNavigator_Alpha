@@ -1,0 +1,29 @@
+<ul class="govuk-list govuk-!-font-size-16">
+    {% if finder_data.full_time_permanent_employees %}
+        <li>
+            {{ finder_data.full_time_permanent_employees }}
+            full-time permanent employees
+        </li>
+    {% endif %}
+
+    {% if finder_data.full_time_contract_employees %}
+        <li>
+            {{ finder_data.full_time_contract_employees }}
+            full-time contract employees
+        </li>
+    {% endif %}
+
+    {% if finder_data.part_time_permanent_employees %}
+        <li>
+            {{ finder_data.part_time_permanent_employees }}
+            part-time permanent employees
+        </li>
+    {% endif %}
+
+    {% if finder_data.part_time_contract_employees %}
+        <li>
+            {{ finder_data.part_time_contract_employees }}
+            part-time contract employees
+        </li>
+    {% endif %}
+</ul>

@@ -1,0 +1,40 @@
+.accordion {
+    $root: &;
+    margin: 0;
+
+    &:active,
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.is-open {
+        #{$root}__icon {
+            transform: rotate(180deg);
+        }
+
+        #{$root}__content {
+            transform: scaleY(1);
+            position: relative;
+            visibility: visible;
+            width: auto;
+            height: auto;
+            overflow: visible;
+        }
+    }
+
+    &__icon {
+        width: 25px;
+        height: 18px;
+        transition: transform 0.2s ease;
+    }
+
+    &__content {
+        display: inline-block;
+        margin-left: 2px;
+        position: absolute;
+        visibility: hidden;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+    }
+}

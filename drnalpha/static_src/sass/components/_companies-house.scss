@@ -1,0 +1,22 @@
+.companies-house__results {
+    list-style: none;
+    padding: 0;
+}
+
+.companies-house__item-wrapper {
+    cursor: pointer;
+    border-bottom: 1px solid $color--border;
+    padding: 0.5em 1em;
+
+    &:hover {
+        background-color: $color--blue;
+        color: $color--white;
+    }
+}
+.companies-house__item--title {
+    font-weight: 700;
+}
+
+.companies-house__item--number {
+    font-weight: 500;
+}

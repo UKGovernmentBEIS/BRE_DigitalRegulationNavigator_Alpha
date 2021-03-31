@@ -1,0 +1,16 @@
+context:
+  tracker:
+    pk: 1
+  category:
+    pk: 1
+    slug: premises
+  task:
+    pk: 1
+    name: Alcohol License
+    regulation:
+      name: Licensing Act 2002, Section 4
+      get_importance_display: Mandatory
+    get_status_display: Overdue
+    is_overdue: true
+    due_date: 2021-01-01
+    lead_time: '3 weeks'

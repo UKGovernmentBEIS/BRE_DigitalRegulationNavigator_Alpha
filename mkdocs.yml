@@ -1,0 +1,54 @@
+site_name: DRN Alpha
+repo_url: https://github.com/UKGovernmentBEIS/BRE_DigitalRegulationNavigator_Alpha
+site_url:
+edit_uri: 'edit/main/docs/'
+
+repo_name: Gitlab
+dev_addr: 0.0.0.0:8001
+theme:
+  name: material
+  font: false
+
+markdown_extensions:
+  - codehilite
+  - admonition
+  - sane_lists
+  - toc:
+      permalink: true
+  # pymdown-extensions meant to bring the Markdown implementation closer to GFM.
+  - pymdownx.details
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.tabbed
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
+extra_css:
+  - https://unpkg.com/mermaid@8.9.0/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js
+
+nav:
+  - 'Home': 'index.md'
+  - 'Entity relationship diagram': 'alpha/erd.md'
+  - 'Authentication with "magic links"': 'alpha/authentication-with-magic-links.md'
+  - 'Proof of Concepts':
+      - 'SIC Codes': 'alpha/proof-of-concepts/sic-notes.md'
+      - 'Regulator data notes': 'alpha/proof-of-concepts/regulator-er-notes.md'
+      - 'Regulation data notes': 'alpha/proof-of-concepts/regulation-er-notes.md'
+  - 'Developer notes':
+      - 'Project conventions': 'developer-guide/project-conventions.md'
+      - 'Deployment': 'developer-guide/deployment.md'
+      - 'Front-end':
+          - 'Tooling': 'developer-guide/front-end/tooling.md'
+          - 'Form overrides': 'developer-guide/front-end/form-overrides.md'
+          - 'Placeholder images': 'developer-guide/front-end/placeholder-images.md'
+      - 'Continuous integration': 'developer-guide/continuous-integration.md'
+      - 'Anonymised data': 'developer-guide/anonymised-data.md'
+      - 'Data protection': 'developer-guide/data-protection.md'

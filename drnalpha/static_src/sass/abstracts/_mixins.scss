@@ -1,0 +1,155 @@
+// /* ============================================
+//     Media queries
+// */
+
+// @mixin media-query($queries...) {
+//     @each $query in $queries {
+//         @each $breakpoint in $breakpoints {
+//             $name: nth($breakpoint, 1);
+//             $declaration: nth($breakpoint, 2);
+
+//             @if $query == $name and $declaration {
+//                 @media only screen and #{$declaration} {
+//                     @content;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+/* ============================================
+    Hide text
+*/
+
+@mixin hidden() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+// /* ============================================
+//     Font sizes
+// */
+
+// @mixin font-size($size) {
+//     @if $size == null {
+//         @warn 'Font size ‘#{$keyword}’ does not exist';
+//     } @else {
+//         $small-size: map-get($small-font-sizes, $size);
+//         font-size: $small-size;
+
+//         @include media-query(medium) {
+//             $medium-size: map-get($medium-font-sizes, $size);
+//             font-size: $medium-size;
+//         }
+
+//         @include media-query(large) {
+//             $large-size: map-get($large-font-sizes, $size);
+//             font-size: $large-size;
+//         }
+//     }
+// }
+
+// /* ============================================
+//     Heading text
+// */
+
+// @mixin heading-text() {
+//     font-family: $font--primary;
+//     font-style: inherit;
+//     font-weight: inherit;
+// }
+
+// /* ============================================
+//     Grid layout
+// */
+
+// @mixin grid-layout() {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     padding: 0 $grid;
+//     max-width: $site-width;
+//     margin: 0 auto;
+
+//     @include media-query(medium) {
+//         padding: 0 $grid * 3;
+//     }
+
+//     @include media-query(large) {
+//         grid-template-columns: 16.74% 1fr 1fr 1fr 16.74%;
+//         margin: 0 auto;
+//     }
+// }
+
+// /* ============================================
+//     z-index
+// */
+
+// @mixin z-index($key) {
+//     z-index: z-index($key);
+// }
+
+// /* ============================================
+//     Notch
+// */
+
+// @mixin notch($bg, $notch-position) {
+//     padding: 7rem 0;
+//     background-color: $bg;
+//     position: relative;
+
+//     @if $bg == black {
+//         color: $color--white;
+//     } @else {
+//         color: $color--black;
+//     }
+
+//     &::after {
+//         content: '';
+//         width: 70%;
+//         height: 100px;
+//         position: absolute;
+//         display: block;
+//         bottom: -100px;
+//         background-color: $bg;
+//         z-index: 1;
+
+//         @if $notch-position == left {
+//             left: 0;
+//         } @else {
+//             right: 0;
+//         }
+//     }
+// }
+
+// /* ============================================
+//     Underline Hover
+// */
+
+// @mixin underline-hover() {
+//     &::after {
+//         content: '';
+//         display: block;
+//         height: 2px;
+//         left: 0;
+//         position: absolute;
+//         background: currentColor;
+//         transition: width $transition, left $transition;
+//         width: 100%;
+//         bottom: -2px;
+
+//         @include media-query(medium) {
+//             width: 0;
+//         }
+//     }
+
+//     &:focus,
+//     &:hover {
+//         &::after {
+//             width: 100%;
+//             left: 0;
+//         }
+//     }
+// }

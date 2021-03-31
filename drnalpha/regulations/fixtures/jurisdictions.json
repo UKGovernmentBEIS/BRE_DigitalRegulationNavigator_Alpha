@@ -1,0 +1,42 @@
+[
+  {
+    "model": "regulations.jurisdiction",
+    "pk": 1,
+    "fields": {
+      "name": "England",
+      "slug": "england",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.jurisdiction",
+    "pk": 2,
+    "fields": {
+      "name": "Northern Ireland",
+      "slug": "northern-ireland",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.jurisdiction",
+    "pk": 3,
+    "fields": {
+      "name": "Scotland",
+      "slug": "scotland",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  },
+  {
+    "model": "regulations.jurisdiction",
+    "pk": 4,
+    "fields": {
+      "name": "Wales",
+      "slug": "wales",
+      "created_at": "2021-03-03T17:22:01.481391+00:00",
+      "updated_at": "2021-03-03T17:22:01.481391+00:00"
+    }
+  }
+]

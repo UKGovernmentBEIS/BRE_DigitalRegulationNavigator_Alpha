@@ -1,0 +1,5 @@
+context:
+  field:
+    options:
+      - { label: Check eligibility, status: completed }
+      - { label: Read declaration, status: completed }

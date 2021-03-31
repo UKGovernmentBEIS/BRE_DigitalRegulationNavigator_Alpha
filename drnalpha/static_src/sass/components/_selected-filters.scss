@@ -1,0 +1,57 @@
+.selected-filters {
+    align-content: center;
+    background-color: $color--light-grey;
+    display: flex;
+    flex-direction: row;
+    padding: govuk-spacing(2);
+
+    &__label {
+        @include govuk-font($size: 14, $weight: bold);
+        padding: govuk-spacing(1);
+        flex: none;
+    }
+
+    &__list {
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: -(govuk-spacing(1)) 0;
+        padding: 0;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        @include govuk-font($size: 14, $line-height: 1);
+        border-radius: 4px;
+        border: 1px solid $color--black;
+        color: $color--black;
+        display: block;
+        margin: govuk-spacing(1);
+        padding: 2px 6px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $color--white;
+        }
+
+        &:focus {
+            @include govuk-focused-text();
+            box-shadow: none;
+        }
+    }
+
+    &__link-label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__link-icon {
+        @include govuk-font($size: 24, $line-height: 1);
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

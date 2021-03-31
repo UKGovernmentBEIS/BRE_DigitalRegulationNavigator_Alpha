@@ -1,0 +1,6 @@
+context:
+  step:
+    name: This is step 1
+    description: <p>Intro text about this step.</p>
+    get_status_display: Not started
+    due_date: 2021-01-01

@@ -1,0 +1,12 @@
+<fieldset {% if fieldset.css_id %}id="{{ fieldset.css_id }}"{% endif %}
+    class="govuk-fieldset {{ fieldset.css_class }} {{ form_style }}"
+    {{ fieldset.flat_attrs|safe }}>
+    {% if legend %}
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                {{ legend|safe }}
+            </h1>
+        </legend>
+    {% endif %}
+    {{ fields|safe }}
+</fieldset>

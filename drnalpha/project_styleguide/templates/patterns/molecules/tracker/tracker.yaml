@@ -1,0 +1,10 @@
+context:
+  tracker:
+    pk: 1
+  category:
+    pk: 1
+    name: premises
+    slug: premises
+    verbose_name: my premises
+    regulations_count: 12
+    description: Intro text about this section
